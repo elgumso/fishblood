@@ -5,10 +5,10 @@ Having recently been diagnosed with Type 1 Diabetes, I wanted a way to see my Bl
 
 ![Fishblood](./fishblood.PNG)
 
-Fishblood will install a crontab entry for the user to pull the current bloodsugar values every minute and update `/tmp/blood`. After modifying the prompt file Fishblood will display these values on the Fish prompt.
+Fishblood will install a crontab entry for the current user to pull the bloodsugar values every minute and update `/tmp/blood` (default configuation). After modifying the prompt file the values will be displayed on the Fish terminal prompt, as shown in the screenshot above.
 
 ### Dependencies
-This is tested as working on Ubuntu with `Fish 3.3.1`, and requires the JSON tool `jq`, as well as a working `Nightscout` instance, or any server endpoint where the Blood Glucose and Delta values are updated and can be pulled from. 
+This is tested as working on Ubuntu with `Fish 3.3.1`, and requires the tools `jq` and `curl`, as well as a working `Nightscout` instance, or any server endpoint where the Blood Glucose and Delta values are updated and can be pulled from. 
 
 <i>Note: Uncomment the lines in the installation script to install the latest version of Fish if necessary.</i> 
 
@@ -31,7 +31,7 @@ Edit the install script with your favourite text editor and change the `NS_URL` 
 ```
 The installation script will backup the `prompt_login.fish` file to the users home directory. If anything goes wrong, just restore this file over the original prompt file in `/usr/share/fish/functions/`
 
-### WSL
+#### WSL:
 When running WSL the `cron` service is not started by default. The service can be started manually on Ubuntu using the following command: 
 ```console
   sudo service cron start
