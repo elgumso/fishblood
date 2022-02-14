@@ -1,10 +1,10 @@
 #!/bin/bash
 
 ## Config
-NS_URL="https://your_nightscout_server.com"	# Nightscout instance URL
-updateInt="1"	 			                # Update interval in minutes
-bloodFile="/tmp/blood"		                # Location to store updated values
-promptFile="/usr/share/fish/functions/prompt_login.fish"
+NS_URL="https://your_nightscout_server.com"	                # Nightscout instance URL
+updateInt="1"                                               # Update interval in minutes
+bloodFile="/tmp/blood"		                                # Location to store updated values
+promptFile="/usr/share/fish/functions/prompt_login.fish"    # Fish prompt file to be modified
 xUser=$USER
 
 echo -e "\n[+] Fishblood - elGumso 2022"

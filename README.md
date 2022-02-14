@@ -13,12 +13,19 @@ This is tested as working on Ubuntu with `Fish 3.3.1`, and requires the JSON too
 
 ### Usage
 
-Installation:
+#### Configuration:
+```console
+  git clone https://github.com/elgumso/fishblood
+  cd fishblood
+```
+Edit the install script with your favourite text editor and change the `NS_URL` value to point at your Nightscout instance.
+
+#### Installation:
 ```console
   chmod +x fishblood_install.sh
   ./fishblood_install.sh
 ```
-The installation script will backup the `prompt_login.fish` file to the users home directory. If anything goes wrong just restore this file over the original prompt file in `/usr/share/fish/functions/`
+The installation script will backup the `prompt_login.fish` file to the users home directory. If anything goes wrong, just restore this file over the original prompt file in `/usr/share/fish/functions/`
 
 ### WSL
 When running WSL the `cron` service is not started by default. The service can be started manually on Ubuntu using the following command: 
