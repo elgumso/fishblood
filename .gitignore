@@ -1,0 +1,15 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+.fleet/
+
+# Python / misc tooling that sometimes lands here
+__pycache__/
+.venv/
